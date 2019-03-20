@@ -1,9 +1,23 @@
-D:/WHU/Sophomore_B/ccexp2/signal6/DMem.v {1 {vlog -work work -vopt D:/WHU/Sophomore_B/ccexp2/signal6/DMem.v
+D:/WHU/Sophomore_B/ccexp2/signal6/Alu.v {1 {vlog -work work -vopt D:/WHU/Sophomore_B/ccexp2/signal6/Alu.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module Alu
+
+Top level modules:
+	Alu
+
+} {} {}} D:/WHU/Sophomore_B/ccexp2/signal6/DMem.v {1 {vlog -work work -vopt D:/WHU/Sophomore_B/ccexp2/signal6/DMem.v
 Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
 -- Compiling module DMem
 
 Top level modules:
 	DMem
+
+} {} {}} D:/WHU/Sophomore_B/ccexp2/signal6/Ctrl.v {1 {vlog -work work -vopt D:/WHU/Sophomore_B/ccexp2/signal6/Ctrl.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module Ctrl
+
+Top level modules:
+	Ctrl
 
 } {} {}} D:/WHU/Sophomore_B/ccexp2/signal6/IM.v {1 {vlog -work work -vopt D:/WHU/Sophomore_B/ccexp2/signal6/IM.v
 Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
@@ -18,6 +32,13 @@ Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
 
 Top level modules:
 	Extender
+
+} {} {}} D:/WHU/Sophomore_B/ccexp2/signal6/Mips.v {1 {vlog -work work -vopt D:/WHU/Sophomore_B/ccexp2/signal6/Mips.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module Mips
+
+Top level modules:
+	Mips
 
 } {} {}} D:/WHU/Sophomore_B/ccexp2/signal6/GPR.v {1 {vlog -work work -vopt D:/WHU/Sophomore_B/ccexp2/signal6/GPR.v
 Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
