@@ -4,7 +4,8 @@ module Mips( );
   reg Clk, Reset;
   
    initial begin
-      $readmemh( "Test_6_Instr.txt", U_IM.IMem ) ; 
+      // $readmemh( "Test_6_Instr.txt", U_IM.IMem ) ; 
+      $readmemh( "Test_Signal_Pipeline.txt", U_IM.IMem ) ; 
       
       $monitor("PC = 0x%8X, IR = 0x%8X", U_pcUnit.PC, opCode );        
       Clk = 1 ;

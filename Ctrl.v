@@ -60,6 +60,58 @@ module Ctrl(jump,RegDst,Branch,MemR,Mem2R,MemW,RegW,Alusrc,ExtOp,Aluctrl,OpCode,
                         ExtOp=`EXT_ZERO;
                         Aluctrl=`ALUOp_SUBU;
                         end
+                    `INSTR_ADD_FUNCT: 
+                        begin
+                        jump=0;
+                        RegDst=1;
+                        Branch=0;
+                        MemR=0;
+                        Mem2R=0;
+                        MemW=0;
+                        RegW=1;
+                        Alusrc=0;
+                        ExtOp=`EXT_ZERO;
+                        Aluctrl=`ALUOp_ADD;
+                        end
+                    `INSTR_SUB_FUNCT: 
+                        begin
+                        jump=0;
+                        RegDst=1;
+                        Branch=0;
+                        MemR=0;
+                        Mem2R=0;
+                        MemW=0;
+                        RegW=1;
+                        Alusrc=0;
+                        ExtOp=`EXT_ZERO;
+                        Aluctrl=`ALUOp_SUB;
+                        end
+                    `INSTR_AND_FUNCT: 
+                        begin
+                        jump=0;
+                        RegDst=1;
+                        Branch=0;
+                        MemR=0;
+                        Mem2R=0;
+                        MemW=0;
+                        RegW=1;
+                        Alusrc=0;
+                        ExtOp=`EXT_ZERO;
+                        Aluctrl=`ALUOp_AND;
+                        end
+                    `INSTR_OR_FUNCT: 
+                        begin
+                        jump=0;
+                        RegDst=1;
+                        Branch=0;
+                        MemR=0;
+                        Mem2R=0;
+                        MemW=0;
+                        RegW=1;
+                        Alusrc=0;
+                        ExtOp=`EXT_ZERO;
+                        Aluctrl=`ALUOp_OR;
+                        end
                     `INSTR_SLL_FUNCT: 
                         begin
                         jump=0;
@@ -156,7 +208,7 @@ module Ctrl(jump,RegDst,Branch,MemR,Mem2R,MemW,RegW,Alusrc,ExtOp,Aluctrl,OpCode,
             `INSTR_LUI_OP:
                 begin
                 jump=0;
-                RegDst=1;
+                RegDst=0;
                 Branch=0;
                 MemR=0;
                 Mem2R=0;

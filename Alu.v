@@ -24,13 +24,19 @@ module Alu(AluResult,Zero,DataIn1,DataIn2,AluCtrl);
         case ( AluCtrl )
             `ALUOp_ADDU: AluResult = DataIn1 + DataIn2;
             `ALUOp_SUBU: AluResult = DataIn1 - DataIn2;
+            `ALUOp_AND: AluResult = DataIn1 & DataIn2;
             `ALUOp_OR: AluResult = DataIn1 | DataIn2;
             `ALUOp_ADD: AluResult = DataIn1 + DataIn2;
             `ALUOp_SUB: AluResult = DataIn1 - DataIn2;
             `ALUOp_SLL: AluResult = AluResult << DataIn2[10:6];
             `ALUOp_SRL: AluResult = AluResult >> DataIn2[10:6];
-            `ALUOp_BNE: Zero = (DataIn1 != DataIn2) ? 1 : 0;
-            `ALUOp_SLT: AluResult = (DataIn1 < DataIn2);
+            `ALUOp_EQL: AluResult = DataIn1 - DataIn2;
+            `ALUOp_BNE: 
+                begin 
+                    AluResult = DataIn1 - DataIn2;
+                    Zero = (DataIn1 != DataIn2) ? 1 : 0;
+                end
+            `ALUOp_SLT: AluResult = (DataIn1[31] == DataIn2[31]) ? (DataIn1 < DataIn2) : (DataIn1[31] > DataIn2[31]);
             default: ;
         endcase
 
