@@ -6,6 +6,7 @@ entity Alu is
         Zero            : out    vl_logic;
         DataIn1         : in     vl_logic_vector(31 downto 0);
         DataIn2         : in     vl_logic_vector(31 downto 0);
+        Shamt           : in     vl_logic_vector(4 downto 0);
         AluCtrl         : in     vl_logic_vector(4 downto 0)
     );
 end Alu;

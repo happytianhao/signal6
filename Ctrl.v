@@ -121,7 +121,7 @@ module Ctrl(jump,RegDst,Branch,MemR,Mem2R,MemW,RegW,Alusrc,ExtOp,Aluctrl,OpCode,
                         Mem2R=0;
                         MemW=0;
                         RegW=1;
-                        Alusrc=1;
+                        Alusrc=0;
                         ExtOp=`EXT_ZERO;
                         Aluctrl=`ALUOp_SLL;
                         end
@@ -134,7 +134,7 @@ module Ctrl(jump,RegDst,Branch,MemR,Mem2R,MemW,RegW,Alusrc,ExtOp,Aluctrl,OpCode,
                         Mem2R=0;
                         MemW=0;
                         RegW=1;
-                        Alusrc=1;
+                        Alusrc=0;
                         ExtOp=`EXT_ZERO;
                         Aluctrl=`ALUOp_SRL;
                         end

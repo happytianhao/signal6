@@ -108,7 +108,7 @@ module Mips( );
 	assign aluDataIn2 = (Alusrc==1)?extDataOut:gprDataOut2;
 	
 //ALU实例化	
-	Alu U_Alu(.AluResult(aluDataOut),.Zero(zero),.DataIn1(gprDataOut1),.DataIn2(aluDataIn2),.AluCtrl(Aluctrl));
+	Alu U_Alu(.AluResult(aluDataOut),.Zero(zero),.DataIn1(gprDataOut1),.DataIn2(aluDataIn2),.Shamt(opCode[10:6]),.AluCtrl(Aluctrl));
 	
 	
 	assign gprDataIn = (Mem2R==1)?dmDataOut:aluDataOut;

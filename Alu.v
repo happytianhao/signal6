@@ -1,9 +1,10 @@
 `include "ctrl_encode_def.v"
-module Alu(AluResult,Zero,DataIn1,DataIn2,AluCtrl);
+module Alu(AluResult,Zero,DataIn1,DataIn2,Shamt,AluCtrl);
 
 	input  [31:0] 		DataIn1;		//运算数据1
 	input  [31:0]		DataIn2;		//运算数据2
 	input  [4:0]		AluCtrl;		//运算器控制信号
+    input  [4:0]        Shamt;
 	
 	output reg[31:0]		AluResult;		//运算器输出结果
 	output reg				Zero;			//结果是否为零
@@ -24,8 +25,8 @@ module Alu(AluResult,Zero,DataIn1,DataIn2,AluCtrl);
             `ALUOp_OR: AluResult = DataIn1 | DataIn2;
             `ALUOp_ADD: AluResult = DataIn1 + DataIn2;
             `ALUOp_SUB: AluResult = DataIn1 - DataIn2;
-            `ALUOp_SLL: AluResult = DataIn1 << DataIn2[10:6];
-            `ALUOp_SRL: AluResult = DataIn1 >> DataIn2[10:6];
+            `ALUOp_SLL: AluResult = DataIn2 << Shamt;
+            `ALUOp_SRL: AluResult = DataIn2 >> Shamt;
             `ALUOp_EQL: AluResult = DataIn1 - DataIn2;
             `ALUOp_BNE: 
                 begin 
