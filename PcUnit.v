@@ -10,7 +10,6 @@ module PcUnit(PC,PcReSet,PcSel,Jump,Clk,Adress,Jumpaddr);
 	
 	output reg[31:0] PC;
 	
-	// integer i;
 	reg [31:0] temp;
 	always@(posedge Clk or posedge PcReSet)
 	begin
