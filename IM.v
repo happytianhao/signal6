@@ -1,13 +1,12 @@
 
-
 module IM(OpCode,ImAdress);
-	input [9:0] ImAdress;
+	input [7:0] ImAdress;
 	
 	output [31:0]  OpCode;
 	
 	reg[31:0] Opcode;
 	
-	reg [31:0]  IMem[1023:0];
+	reg [31:0]  IMem[255:0];
 	
 	always@(ImAdress)
 	begin

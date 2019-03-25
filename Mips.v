@@ -14,17 +14,13 @@ module Mips( );
       #5 Reset = 1 ;
       #20 Reset = 0 ;
    end
-   
    always
 	   #(50) Clk = ~Clk;
 	
 //PC	
-
 	wire [31:0] pcOut;
-
-
 //IM	
-	wire [9:0]  imAdr;
+	wire [7:0]  imAdr;
 	wire [31:0] opCode;
 	
 //GPR
@@ -40,7 +36,7 @@ module Mips( );
 	
 //DMem
 
-	wire [4:0]  dmDataAdr;
+	wire [7:0]  dmDataAdr;
 	wire [31:0] dmDataOut;
 	
 //Ctrl
@@ -68,8 +64,7 @@ module Mips( );
 	
 //PC块实例化	
     PcUnit U_pcUnit(.PC(pcOut),.PcReSet(Reset),.PcSel(pcSel),.Jump(jump),.Clk(Clk),.Adress(extDataOut),.Jumpaddr(jumpaddr));
-	
-	assign imAdr = pcOut[11:2];
+	assign imAdr = pcOut[9:2];
 //指令寄存器实例化	
 	IM U_IM(.OpCode(opCode),.ImAdress(imAdr));
 
@@ -81,11 +76,8 @@ module Mips( );
 	
 	//这里和书上不一样，我改成了书上的信号！！！
 	assign gprWeSel = (RegDst==0)?opCode[20:16]:opCode[15:11];
-
 	assign extDataIn = opCode[15:0];
-	
-	
-	 
+
 	 wire [7:0] o_seg,o_sel;
 	 //reg[31:0] disp_data = 32'hAA5555AA;
      wire [31:0] disp_data ;//= 32'hAA5555AA;
@@ -103,32 +95,13 @@ module Mips( );
 	Ctrl U_Ctrl(.jump(jump),.RegDst(RegDst),.Branch(Branch),.MemR(MemR),.Mem2R(Mem2R)
 				,.MemW(MemW),.RegW(RegW),.Alusrc(Alusrc),.ExtOp(ExtOp),.Aluctrl(Aluctrl)
 				,.OpCode(op),.funct(funct));
-				
 //扩展器实例化	
 	Extender U_extend(.ExtOut(extDataOut),.DataIn(extDataIn),.ExtOp(ExtOp));
-	
-	assign aluDataIn2 = (Alusrc==1)?extDataOut:gprDataOut2;
-	
+	assign aluDataIn2 = (Alusrc==1)?extDataOut:gprDataOut2;//////////
 //ALU实例化	
 	Alu U_Alu(.AluResult(aluDataOut),.Zero(zero),.DataIn1(gprDataOut1),.DataIn2(aluDataIn2),.Shamt(opCode[10:6]),.AluCtrl(Aluctrl));
-	
-	
-	assign gprDataIn = (Mem2R==1)?dmDataOut:aluDataOut;
-	
-	
+	assign gprDataIn = (Mem2R==1)?dmDataOut:aluDataOut;////////////
 //DM实例化
-
-	assign dmDataAdr = aluDataOut[4:0];
+	assign dmDataAdr = aluDataOut[7:0];//////////
 	DMem U_Dmem(.DataOut(dmDataOut),.DataAdr(dmDataAdr),.DataIn(gprDataOut2),.DMemW(MemW),.DMemR(MemR),.clk(Clk));
 endmodule
-
-
-
-
-
-
-
-
-
-
-
