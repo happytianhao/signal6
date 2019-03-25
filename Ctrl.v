@@ -56,6 +56,19 @@ module Ctrl(jump,RegDst,Branch,MemR,Mem2R,MemW,RegW,Alusrc,ExtOp,Aluctrl,OpCode,
                     default: ;
                 endcase
                 end
+            `INSTR_ADDI_OP:
+                begin
+                jump=0;
+                RegDst=0;
+                Branch=0;
+                MemR=0;
+                Mem2R=0;
+                MemW=0;
+                RegW=1;
+                Alusrc=1;
+                ExtOp=`EXT_SIGNED;
+                Aluctrl=`ALUOp_ADD;
+                end
             `INSTR_ORI_OP:
                 begin
                 jump=0;

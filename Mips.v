@@ -102,6 +102,6 @@ module Mips( );
 	Alu U_Alu(.AluResult(aluDataOut),.Zero(zero),.DataIn1(gprDataOut1),.DataIn2(aluDataIn2),.Shamt(opCode[10:6]),.AluCtrl(Aluctrl));
 	assign gprDataIn = (Mem2R==1)?dmDataOut:aluDataOut;////////////
 //DM实例化
-	assign dmDataAdr = aluDataOut[7:0];//////////
+	assign dmDataAdr = aluDataOut[9:2];//////////
 	DMem U_Dmem(.DataOut(dmDataOut),.DataAdr(dmDataAdr),.DataIn(gprDataOut2),.DMemW(MemW),.DMemR(MemR),.clk(Clk));
 endmodule
