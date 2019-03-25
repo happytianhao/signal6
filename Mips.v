@@ -5,7 +5,8 @@ module Mips( );
   
    initial begin
       // $readmemh( "Test_6_Instr.txt", U_IM.IMem ) ; 
-      $readmemh( "Test_Signal_Pipeline.txt", U_IM.IMem ) ; 
+      // $readmemh( "Test_Signal_Pipeline.txt", U_IM.IMem ) ; 
+      $readmemh( "Sort.txt", U_IM.IMem ) ; 
       
       $monitor("PC = 0x%8X, IR = 0x%8X", U_pcUnit.PC, opCode );        
       Clk = 1 ;
@@ -23,7 +24,7 @@ module Mips( );
 
 
 //IM	
-	wire [4:0]  imAdr;
+	wire [9:0]  imAdr;
 	wire [31:0] opCode;
 	
 //GPR
@@ -68,7 +69,7 @@ module Mips( );
 //PC块实例化	
     PcUnit U_pcUnit(.PC(pcOut),.PcReSet(Reset),.PcSel(pcSel),.Jump(jump),.Clk(Clk),.Adress(extDataOut),.Jumpaddr(jumpaddr));
 	
-	assign imAdr = pcOut[6:2];
+	assign imAdr = pcOut[11:2];
 //指令寄存器实例化	
 	IM U_IM(.OpCode(opCode),.ImAdress(imAdr));
 
@@ -87,6 +88,7 @@ module Mips( );
 	 
 	 wire [7:0] o_seg,o_sel;
 	 //reg[31:0] disp_data = 32'hAA5555AA;
+     wire [31:0] disp_data ;//= 32'hAA5555AA;
 	 assign disp_data = (RegW)?gprDataIn:((MemW)?gprDataOut2:pcOut);	
 	 seg7x16 U_seg7x16(.clk(Clk), 
                 .reset(Reset),

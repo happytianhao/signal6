@@ -1,7 +1,7 @@
 
 
 module IM(OpCode,ImAdress);
-	input [4:0] ImAdress;
+	input [9:0] ImAdress;
 	
 	output [31:0]  OpCode;
 	

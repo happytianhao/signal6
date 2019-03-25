@@ -169,7 +169,7 @@ module Ctrl(jump,RegDst,Branch,MemR,Mem2R,MemW,RegW,Alusrc,ExtOp,Aluctrl,OpCode,
             `INSTR_SW_OP:
                 begin
                 jump=0;
-                RegDst=0;
+                RegDst=0;//x
                 Branch=0;
                 MemR=0;
                 Mem2R=0;
