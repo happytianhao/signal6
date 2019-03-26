@@ -1,12 +1,15 @@
 
-module Mips( );
-	
-  reg Clk, Reset;
-  
+module Mips(/* Clk,Reset, */o_seg,o_sel);
+	/* input   Clk;
+    input   Reset; */
+    reg Clk, Reset;
+    output [7:0] o_seg,o_sel;
    initial begin
       // $readmemh( "Test_6_Instr.txt", U_IM.IMem ) ; 
       // $readmemh( "Test_Signal_Pipeline.txt", U_IM.IMem ) ; 
-      $readmemh( "Sort.txt", U_IM.IMem ) ; 
+      // $readmemh( "Test_Signal_Pipeline2.txt", U_IM.IMem ) ; 
+      // $readmemh( "Bubble_Sort.txt", U_IM.IMem ) ;
+      $readmemh( "Selection_Sort.txt", U_IM.IMem ) ;
       
       $monitor("PC = 0x%8X, IR = 0x%8X", U_pcUnit.PC, opCode );        
       Clk = 1 ;
