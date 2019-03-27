@@ -9,7 +9,8 @@ module Mips(/* Clk,Reset, */o_seg,o_sel);
       // $readmemh( "Test_Signal_Pipeline.txt", U_IM.IMem ) ; 
       // $readmemh( "Test_Signal_Pipeline2.txt", U_IM.IMem ) ; 
       // $readmemh( "Bubble_Sort.txt", U_IM.IMem ) ;
-      $readmemh( "Selection_Sort.txt", U_IM.IMem ) ;
+      // $readmemh( "Selection_Sort.txt", U_IM.IMem ) ;
+      $readmemh( "TianHao_Sort.txt", U_IM.IMem ) ;
       
       $monitor("PC = 0x%8X, IR = 0x%8X", U_pcUnit.PC, opCode );        
       Clk = 1 ;

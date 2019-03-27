@@ -33,7 +33,7 @@ Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
 Top level modules:
 	Extender
 
-} {} {}} D:/WHU/Sophomore_B/ccexp2/signal6/Mips.v {1 {vlog -work work -vopt {D:\WHU\Sophomore_B\ccexp2\signal6\Mips.v}
+} {} {}} D:/WHU/Sophomore_B/ccexp2/signal6/Mips.v {1 {vlog -work work -vopt D:/WHU/Sophomore_B/ccexp2/signal6/Mips.v
 Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
 -- Compiling module Mips
 

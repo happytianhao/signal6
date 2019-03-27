@@ -20,7 +20,7 @@ n@alu
 !s85 0
 !s100 CUAD:TNjY>On;[l`VKdAG3
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/Alu.v|
-!s108 1553580757.012000
+!s108 1553662282.670000
 !s107 ctrl_encode_def.v|D:/WHU/Sophomore_B/ccexp2/signal6/Alu.v|
 vclk_div
 I1nMbCKBjhHbk^U6]OLVJa0
@@ -36,7 +36,7 @@ r1
 R2
 !s100 UK6nh]i]kKfiU3mffzkbl3
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/clk_div.v|
-!s108 1553580757.184000
+!s108 1553662282.999000
 !s107 D:/WHU/Sophomore_B/ccexp2/signal6/clk_div.v|
 !i10b 1
 !s85 0
@@ -57,7 +57,7 @@ n@ctrl
 !s85 0
 !s100 [:cZMcFNHohcedLC=`:az2
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/Ctrl.v|
-!s108 1553580757.355000
+!s108 1553662283.280000
 !s107 ctrl_encode_def.v|instruction_def.v|D:/WHU/Sophomore_B/ccexp2/signal6/Ctrl.v|
 vDMem
 !i10b 1
@@ -76,7 +76,7 @@ R2
 n@d@mem
 !s100 =AeZ4VNT7>_4fjm8>HLJ=0
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/DMem.v|
-!s108 1553580757.762000
+!s108 1553662283.468000
 !s107 D:/WHU/Sophomore_B/ccexp2/signal6/DMem.v|
 vExtender
 VX<KDk7Y><P3EkfboZHNMI0
@@ -95,7 +95,7 @@ n@extender
 !s85 0
 !s100 D_NmE2eF[K>Tfl4:6RNl83
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/Extender.v|
-!s108 1553580757.950000
+!s108 1553662283.686000
 !s107 ctrl_encode_def.v|D:/WHU/Sophomore_B/ccexp2/signal6/Extender.v|
 vGPR
 VXafm@[6TSlmzMRG@Sa]DE2
@@ -114,7 +114,7 @@ n@g@p@r
 !s85 0
 !s100 n3zHbgSWEeKm?:_NBD<:?2
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/GPR.v|
-!s108 1553580758.184000
+!s108 1553662284.077000
 !s107 D:/WHU/Sophomore_B/ccexp2/signal6/GPR.v|
 vIM
 VeNI6OI@gBWS:oZZO]3YU[3
@@ -133,27 +133,27 @@ n@i@m
 !s85 0
 !s100 YMFT61NIF;fOBL8zPL6DY2
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/IM.v|
-!s108 1553580758.309000
+!s108 1553662284.186000
 !s107 D:/WHU/Sophomore_B/ccexp2/signal6/IM.v|
 vMips
 VNGoi?PbJRAI5eTo_0bF:z3
 r1
 31
-IJP=`UXQ`8Tc3E^?WTJS7S0
+I6ngDZOP52KPCd0XKgFj8z2
 R3
-w1553580731
-8D:\WHU\Sophomore_B\ccexp2\signal6\Mips.v
-FD:\WHU\Sophomore_B\ccexp2\signal6\Mips.v
+w1553662246
+8D:/WHU/Sophomore_B/ccexp2/signal6/Mips.v
+FD:/WHU/Sophomore_B/ccexp2/signal6/Mips.v
 L0 2
 R1
 R2
 n@mips
 !i10b 1
 !s85 0
-!s100 SM=HMO4Wid<?Wh8aH1V1_0
-!s90 -reportprogress|300|-work|work|-vopt|D:\WHU\Sophomore_B\ccexp2\signal6\Mips.v|
-!s108 1553580758.512000
-!s107 D:\WHU\Sophomore_B\ccexp2\signal6\Mips.v|
+!s100 5H]0V5dEFlz>floZjWcce1
+!s108 1553662284.405000
+!s107 D:/WHU/Sophomore_B/ccexp2/signal6/Mips.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/Mips.v|
 vPcUnit
 Vbj4>9:giWjm=^YTo`eNdz3
 r1
@@ -171,7 +171,7 @@ n@pc@unit
 !s85 0
 !s100 ^O<<>mUgBaO;DkjfLE7EW1
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/PcUnit.v|
-!s108 1553580758.622000
+!s108 1553662284.686000
 !s107 D:/WHU/Sophomore_B/ccexp2/signal6/PcUnit.v|
 vseg7x16
 V=4Y[If0;D_=0mkj4I3NZb3
@@ -189,5 +189,5 @@ R2
 !s85 0
 !s100 V6T@Rz9c5?BJT7FOOXQcB1
 !s90 -reportprogress|300|-work|work|-vopt|D:/WHU/Sophomore_B/ccexp2/signal6/seg7x16.v|
-!s108 1553580758.778000
+!s108 1553662284.858000
 !s107 D:/WHU/Sophomore_B/ccexp2/signal6/seg7x16.v|
